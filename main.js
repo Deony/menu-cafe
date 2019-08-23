@@ -1,7 +1,6 @@
 var itemsList = document.querySelector('.plates'),
     addItems = document.querySelector('.add-items'),
-    items = JSON.parse(localStorage.getItem('items')) || [],
-    deleteItemCross;
+    items = JSON.parse(localStorage.getItem('items')) || [];
 
 function addItem(event) {
     event.preventDefault();
@@ -29,8 +28,6 @@ function populateList(plates = [], platesList) {
             </li>
          `
     }).join('');
-
-    deleteItemCross = document.querySelectorAll('span');
 }
 
 function mainEvent(event) {

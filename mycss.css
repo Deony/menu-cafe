@@ -41,7 +41,7 @@ main {
 	box-shadow: 0 0 0 10px rgba(0, 0, 0, .1);
 }
 
-.menu-wrap h2 {
+.menu-header {
 	text-align: center;
 	margin: 0;
 	font-weight: 200;
@@ -50,7 +50,9 @@ main {
 
 .plates {
 	margin: 5px 0 0;
-	padding: 0;
+	padding: 0 40px 5px 15px;
+	max-height: 35vh;
+	overflow: auto;
 	text-align: left;
 	list-style: none;
 	position: relative;
@@ -60,7 +62,7 @@ main {
 	border-bottom: 1px solid rgba(0, 0, 0, .2);
 	padding: 10px 5px;
 	font-weight: 100;
-	border-radius: 4px;
+	border-radius: 2px;
 	display: flex;
 	transition: background-color .5s;
 }
@@ -72,7 +74,7 @@ main {
 .plates li .delete-item{
 	color: red;
 	position: absolute;
-	right: -26px;
+	right: 10px;
 	padding: 4px 8px;
 	cursor: pointer;
 	font-size: 20px;
@@ -138,6 +140,7 @@ main {
 	background: #d6d8d8;
 	font-weight: bold;
 	border-radius: 4px;
+	background-image: radial-gradient(circle, #ececec 30%, #c1c1c1 100%);
 	transform: scale(0.95);
 	transition: .4s ease;
 }
@@ -155,6 +158,21 @@ main {
 .add-items input[type="submit"]:hover {
 	transform: scale(1);
 }
+
+/*customize scroll*/
+::-webkit-scrollbar {
+	width: 6px;
+}
+
+::-webkit-scrollbar-track {
+	background: rgba(183, 183, 183, .4);
+}
+
+::-webkit-scrollbar-thumb {
+	background: #888;
+	border-radius: 5px;
+}
+
 
 @keyframes rotateCross {
 	from {
